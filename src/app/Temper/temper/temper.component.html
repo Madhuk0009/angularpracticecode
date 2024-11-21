@@ -1,0 +1,66 @@
+
+<div>
+<h1>Data Bindings </h1>
+
+<br>
+
+<h3>{{ interpolation }}</h3>
+
+<br>
+
+<h2> Property binding</h2>
+
+<br>
+
+<img [src]="property" alt="garden" width="400" height="230" [border]="3">
+<br>
+<br>
+<h2>Event binding</h2>
+</div>
+<span>
+<div>
+    <ol class="list-group list-group-numbered">
+      <li class="list-group-item list-group-item-success">With parameter with return. (T T)</li>
+      <li class="list-group-item list-group-item-danger">Without parameter without return. (F F)</li>
+      <li class="list-group-item list-group-item-warning">With parameter without return. (T F)</li>
+      <li class="list-group-item list-group-item-info">Without parameter with return. (F T)</li>
+    </ol>
+  </div>
+ </span>
+  <br>
+<div>
+<ul>
+    <li><button (click)="withpara('Withparamenter with return...Hai Pandu !')">TT SUBMIT</button></li>
+    <li><button (click)="withoutparameter()">FF SUBMIT</button></li>
+    <li>with parameter without return.(T F)</li>
+    <li>without parameter with return.(F T)</li>
+  </ul>
+</div>
+<br>
+  <h2>Two Way data binding</h2>
+
+
+  <h2>*ngFor structral directive</h2>
+
+  <div>
+    <ol class="list-group list-group-numbered">
+      <li class="list-group-item list-group-item-success">{{ laddu }}</li>
+      <!-- <li class="list-group-item list-group-item-danger">Without parameter without return. (F F)</li>
+      <li class="list-group-item list-group-item-warning">With parameter without return. (T F)</li>
+      <li class="list-group-item list-group-item-info">Without parameter with return. (F T)</li> -->
+    </ol>
+  </div>
+
+  <h3>Structural Directives in Angular:</h3> 
+
+  <img *ngIf="isactive" [src]="property" alt="garden" width="400" height="230" [border]="3">
+  <ul>
+    <li *ngFor="let fruit of fruits">{{ fruit }}</li>
+  </ul>
+  
+  
+  
+
+
+
+
