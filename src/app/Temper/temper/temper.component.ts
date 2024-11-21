@@ -9,6 +9,8 @@ export class TemperComponent {
 
   laddu= ['NTR','RAM','ALLARJUN','HERORAM','CHIRANJEEVI']
 
+  property:string = "../../../assets//garden.jpg";
+
   // Common Structural Directives in Angular:
   // *ngFor 
   fruits: string[] = ['Apple', 'Banana', 'Orange', 'Grapes'];
@@ -18,20 +20,26 @@ export class TemperComponent {
 
   interpolation:string = "This is string interpolation data binding";
 
-  property:string ="../../../assets//garden.jpg";
-available: any;
+  ifcondition:string ="../../../assets//ice.jpg";
+  available: any;
   
-
+obj = {
+  name: 'madhu'
+}
 
 // withparamenter with return (T T)
   withpara(data:any){
-  console.log(data)
-   return 
+   return data + "  ==  " +this.obj.name;
   }
   
   // without parameter without return. (F F)
   withoutparameter(){ 
+    
   }
- 
+  testdata:any;
+
+  withparawithoutreturn(data:any){
+    console.log(data.value)
+ }
 
 }

@@ -30,30 +30,39 @@
   <br>
 <div>
 <ul>
-    <li><button (click)="withpara('Withparamenter with return...Hai Pandu !')">TT SUBMIT</button></li>
+  <!-- <input type="text" class="form-control" [(ngModel)]="testdata"> -->
+   <input type="text" class="form-control" #inputdata>
+    <li><button>{{ withpara(inputdata)}}</button></li>
     <li><button (click)="withoutparameter()">FF SUBMIT</button></li>
-    <li>with parameter without return.(T F)</li>
+    <li> <button (click)="withparawithoutreturn(inputdata)">with para without return.(T F)</button></li>
     <li>without parameter with return.(F T)</li>
   </ul>
 </div>
 <br>
+
   <h2>Two Way data binding</h2>
 
 
-  <h2>*ngFor structral directive</h2>
+  <!-- <h2>*ngFor structral directive</h2> -->
 
-  <div>
+  <!-- <div>
     <ol class="list-group list-group-numbered">
-      <li class="list-group-item list-group-item-success">{{ laddu }}</li>
+      <li class="list-group-item list-group-item-success">{{ laddu }}</li> -->
       <!-- <li class="list-group-item list-group-item-danger">Without parameter without return. (F F)</li>
       <li class="list-group-item list-group-item-warning">With parameter without return. (T F)</li>
       <li class="list-group-item list-group-item-info">Without parameter with return. (F T)</li> -->
-    </ol>
-  </div>
+    <!-- </ol>
+  </div> -->
 
   <h3>Structural Directives in Angular:</h3> 
 
-  <img *ngIf="isactive" [src]="property" alt="garden" width="400" height="230" [border]="3">
+  <br>
+
+  <h4>*ngIf</h4>
+
+  <img *ngIf="isactive" [src]="ifcondition" alt="ice" width="400" height="230" [border]="3">
+
+  <h4>*ngFor</h4>
   <ul>
     <li *ngFor="let fruit of fruits">{{ fruit }}</li>
   </ul>
